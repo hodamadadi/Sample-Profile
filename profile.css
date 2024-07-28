@@ -226,7 +226,7 @@ ul {
   margin: 0;
   padding: 20px;
   overflow: hidden;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.2);
 }
 li {
   float: left;
@@ -313,18 +313,7 @@ li.dropdown {
   margin-left: 20rem;
   display: flex;
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
 }
-
-/* .skills-header {
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-} */
 
 .skills-container {
   max-width: 100%;
