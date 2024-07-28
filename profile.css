@@ -226,7 +226,7 @@ ul {
   margin: 0;
   padding: 20px;
   overflow: hidden;
-  box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 li {
   float: left;
@@ -302,10 +302,6 @@ li.dropdown {
       background-position-x: 500%;
     }
   }
-
-/* .links:hover {
-  border-bottom: 2px solid #f6c502;
-} */
 
 /* ABOUT---------------------------------------------------------> */
 
