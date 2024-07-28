@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <!-- Navbar ---------------------------------------------------------->
+    <nav>
+      <ul>
+        <li><a href="profile.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#resume">RESUME</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li class="dropdown">
+          <a href="#price" class="dropbtn">DROP DOWN</a>
+          <div class="dropdown-content">
+            <a href="#price">PRICE</a>
+            <a href="#contact">CONTACT ME</a>
+            <a href="#aresume">RESUME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+          </div>
+        </li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+
+    </nav>
+    <section id="section-1">
+          <div class="all">
+        <h1>HODA MADADI</h1>
+          <h2>Frontend Developer</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          possimus facilis consequatur alias, dolore esse repudiandae quidem
+          officiis quis fuga dignissimos quaerat eveniet rerum, eaque dolores
+          odio repellat vel vitae.
+        </p>
+        <a href="#about"><i class="fa-solid fa-chevron-down "></i></a>
+      </div>
+      <div class="about" id="about" style="padding-top: 100px;">
+        <h1 class="title-effect">ABOUT ME</h1>
+        <p class="services-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          quos, earum.?
+        </p>
+        <div class="about-inner">
+          <img src="side-pro.jpg" class="side-pro" alt="">
+          <div class="about-1">
+            <p><i class="fa-solid fa-chevron-right  "></i> <strong>Name : </strong>Neda Mdadai</p>
+            <p><i class="fa-solid fa-chevron-right"></i> <strong>Website: </strong>WWW.example.com</p>
+            <p><i class="fa-solid fa-chevron-right"></i> <strong>Phone: </strong>+93 731062848</p>
+            <p><i class="fa-solid fa-chevron-right"></i> <strong>City: </strong>New York, USAi</p>
+          </div>
+          <div class="about-2">
+            <p><i class="fa-solid fa-chevron-right"></i> <strong>Age: </strong>20</p>
+            <p><i class="fa-solid fa-chevron-right"></i> <strong>Degree: </strong>Master</p>
+            <p><i class="fa-solid fa-chevron-right"></i> <strong>RhEmail: </strong>email@example</p>
+            <p> <i class="fa-solid fa-chevron-right"></i><strong>Freelance: </strong>Available</p>
+          </div>
+          <div class="about-3"><i class="fa-solid fa-face-smile fa-beat"></i>  347 
+          <p class="about-p"><strong>Lorem ipsum </strong>dolor sit amet, consectetur adipisicing elit. Eos deserunt assumend.</p></div>
+          <div class="about-4"><i class="fa-solid fa-award fa-beat"></i>  442   <p class="about-p"><strong>Lorem ipsum </strong>dolor sit amet, consectetur adipisicing elit. Eos deserunt assumend.</div>
+          <div class="about-5"><i class="fa-solid fa-clock fa-beat"></i> 120  <p class="about-p"><strong>Lorem ipsum </strong>dolor sit amet, consectetur adipisicing elit. Eos deserunt assumend.</div>
+          <div class="about-6"><i class="fa-solid fa-file-shield fa-beat"></i>  677   <p class="about-p"><strong>Lorem ipsum </strong>dolor sit amet, consectetur adipisicing elit. Eos deserunt assumend.</div>
+            <section class="skills" id="skills">
+                 <div class="skills-container">
+                  <div class="skill-container">
+                      <p>HTML & CSS</p>
+                      <div class="percentage html-percentage">90%</div>
+                      <div class="bar">
+                          <span class="html"></span>
+                      </div>
+                  </div>
+                  <div class="skill-container">
+                      <p> React,JS</p>
+                      <div class="percentage css-percentage">90%</div>
+                      <div class="bar">
+                          <span class="css"></span>
+                      </div>
+                  </div>
+                  <div class="skill-container">
+                      <p>JavaScript</p>
+                      <div class="percentage javascript-percentage">80%</div>
+                      <div class="bar">
+                          <span class="javascript"></span>
+                      </div>
+                  </div>
+                  <div class="skill-container">
+                      <p>Node.JS</p>
+                      <div class="percentage node-percentage">50%</div>
+                      <div class="bar">
+                          <span class="node"></span>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <script>const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                spans.forEach((span, index) => {
+                    const percentage = percentages[index];
+                    if (entry.isIntersecting) {
+                        span.classList.add('animate');
+                        percentage.classList.add('animate');
+                    } else {
+                        span.classList.remove('animate');
+                        percentage.classList.remove('animate');
+                    }
+                });
+            });
+        });
+        const skillContainer = document.querySelector('.skills-container');
+        const spans = document.querySelectorAll('.bar span');
+        const percentages = document.querySelectorAll('.percentage');
+        observer.observe(skillContainer);
+        function updatePercentagePositions() {
+            const barWidth = document.querySelector('.bar').clientWidth;
+            percentages.forEach(percentage => {
+                const widthPercentage = parseFloat(percentage.textContent) / 100;
+                percentage.style.left = `${barWidth * widthPercentage - 12.5}px`;
+            });
+        }
+        updatePercentagePositions(); // Call initially</script>
+        </div>
+        <div id="resume">
+          <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+          <h1 class="title-effect word">RESUME</h1>
+          <p class="services-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            quos, earum.?
+          </p>
+  <div class="container">
+    <div class="timeline-item" date-is='20-07-1990'>
+      <h1 class="resume-h1">Hello, 'Im a single div responsive timeline without mediaQueries!</h1>
+      <p>
+        I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+      </p>
+    </div>
+    <div class="timeline-item" date-is='20-07-1990'>
+      <h1 class="resume-h1">Oeehhh, that's awesome.. Me too!</h1>
+      <p>
+        I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+      </p>
+    </div>
+    <div class="timeline-item" date-is='20-07-1990'>
+      <h1 class="resume-h1">I'm ::last-child so my border fades ^__^</h1>
+      <p>
+        I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+      </p>
+    </div>
+  </div>
+  <div class="container-2">
+    <div class="timeline-item" date-is='20-07-1990'>
+      <h1 class="resume-h1">Hello, 'Im a single div responsive timeline without mediaQueries!</h1>
+      <p>
+        I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+      </p>
+    </div>
+    <div class="timeline-item" date-is='20-07-1990'>
+      <h1 class="resume-h1">Oeehhh, that's awesome.. Me too!</h1>
+      <p>
+        I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+      </p>
+    </div>
+    <div class="timeline-item" date-is='20-07-1990'>
+      <h1 class="resume-h1">I'm ::last-child so my border fades ^__^</h1>
+      <p>
+        I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+      </p>
+    </div>
+  </div>
+        </div>
+      <div class="services" id="services">
+        <h1 class="title-effect word">SERVICES</h1>
+        <p class="services-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          quos, earum.?
+        </p>
+        <div class="inner">
+          <div class="Card-0">
+            <a href=""><i class="fa-solid fa-laptop-code services-i"></i></a>
+            <h3>Web Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+              accusantium excepturi maxime iusto laudantium soluta eum beatae
+              eaque nulla nihil delectus. Quae quos officiis eos voluptas
+              architecto totam odio alias.
+            </p>
+          </div>
+          <div class="Card-1">
+            <i class="fa-brands fa-node-js services-i"></i>
+            <a href=""></a>
+            <h3>Web Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+              accusantium excepturi maxime iusto laudantium soluta eum beatae
+              eaque nulla nihil delectus. Quae quos officiis eos voluptas
+              architecto totam odio alias.
+            </p>
+          </div>
+          <div class="Card-2">
+            <a href=""><i class="fa-brands fa-html5 services-i"></i></a>
+            <h3>Web Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+              accusantium excepturi maxime iusto laudantium soluta eum beatae
+              eaque nulla nihil delectus. Quae quos officiis eos voluptas
+              architecto totam odio alias.
+            </p>
+          </div>
+          <div class="Card-3">
+            <a href=""
+              ><i class="fa-brands fa-react" style="color: #343434"></i
+            ></a>
+            <h3>Web Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+              accusantium excepturi maxime iusto laudantium soluta eum beatae
+              eaque nulla nihil delectus. Quae quos officiis eos voluptas
+              architecto totam odio alias.
+            </p>
+          </div>
+        </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="s1.jpg" style="width: 100%" class="img" />
+            <div class="text">
+              <img src="pro1.jpg" class="img-pro" alt="" />
+              <h3 class="user">Neda Madadi</h3>
+              <p class="page-p">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Sapiente, enim placeat reprehenderit ipsa explicabo, sint id
+                exercitationem fuga odio ipsum quibusdam quae accusantium animi
+                tempore nulla, eos cum vel quia!
+              </p>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="s4.jpg" style="width: 100%" class="img" />
+            <div class="text">
+              <img src="pro3.jpg" class="img-pro" alt="" />
+              <h3 class="user">Hoda Madadi</h3>
+              <p class="page-p">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Sapiente, enim placeat reprehenderit ipsa explicabo, sint id
+                exercitationem fuga odio ipsum quibusdam quae accusantium animi
+                tempore nulla, eos cum vel quia!
+              </p>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="b1.jpg" style="width: 100%" class="img" />
+            <div class="text">
+              <img src="pro-2.jpg" class="img-pro" alt="" />
+              <h3 class="user">Hamideh Madadi</h3>
+              <p class="page-p">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Sapiente, enim placeat reprehenderit ipsa explicabo, sint id
+                exercitationem fuga odio ipsum quibusdam quae accusantium animi
+                tempore nulla, eos cum vel quia!
+              </p>
+            </div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides((slideIndex += n));
+          }
+
+          function currentSlide(n) {
+            showSlides((slideIndex = n));
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+          }
+        </script>
+      </div>
+     <div id="portfolio">
+      <h1 class="title-effect word"> PORTFOLIO</h1>
+      <p class="services-p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+        quos, earum.?
+      </p>
+    <div class="btn-all">
+    <button class="btn-1 bt">ALL</button>
+    <button class="btn-2 bt">APP</button>
+    <button class="btn-3 bt">CRAP</button>
+    <button class="btn-4 bt">WEB</button>
+  </div>
+  <div class="images">
+    <img  class="img-1" src="e7.jpg" alt="">
+    <img class="img-2" src="3bb4b66a7952fb07e930c83b45ca6a75.jpg" alt="">
+    <img class="img-3"  src="65f539123d8a4d5e47b19f308daf6881.jpg" alt="">
+    <img class="img-4"  src="cc70a707e399723fe6dab218c620c64a.jpg" alt="">
+    <img class="img-5"  src="e3.jpg" alt="">
+    <img class="img-6" src="cc70a707e399723fe6dab218c620c64a.jpg" alt="">
+    <img  class="img-7"  src="e5.jpg" alt="">
+    <img  class="img-8" src="e7.jpg" alt="">
+    <img class="img-9" src="3bb4b66a7952fb07e930c83b45ca6a75.jpg" alt="">
+    <img class="img-10" src="65f539123d8a4d5e47b19f308daf6881.jpg" alt="">
+  </div>
+     </div>
+     <div id="price">
+      <h1 class="title-effect word"> PRICE</h1>
+      <p class="services-p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+        quos, earum.?
+      </p>
+      <div class="price-inner">
+        <div class="price-1"><p class="price-e">Free</p>
+        <p><span>1000$</span>/month</p>
+      <p>Hoda Mdadai</p>
+    <p>Frontend developer</p>
+  <p>Lorem ipsum dolor sit amet consectetur</p>
+<p>Lorem ipsum dolor sit amet.</p>
+<button class="price-btn">Read more</button></div>
+        <div class="price-2">
+          <p class="price-e">Free</p>
+        <p><span>1000$</span>/month</p>
+      <p>Hoda Mdadai</p>
+    <p>Frontend developer</p>
+  <p>Lorem ipsum dolor sit amet consectetur</p>
+<p>Lorem ipsum dolor sit amet.</p>
+<button class="price-btn">Read more</button>
+        </div>
+        <div class="price-3">
+          <p class="price-e">Free</p>
+        <p><span>1000$</span>/month</p>
+      <p>Hoda Mdadai</p>
+    <p>Frontend developer</p>
+  <p>Lorem ipsum dolor sit amet consectetur</p>
+<p>Lorem ipsum dolor sit amet.</p>
+<button class="price-btn">Read more</button>
+        </div>
+        <div class="price-4"><p class="price-e">Free</p>
+          <p><span>1000$</span>/month</p>
+        <p>Hoda Mdadai</p>
+      <p>Frontend developer</p>
+    <p>Lorem ipsum dolor sit amet consectetur</p>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <button class="price-btn">Read more</button></div>
+      </div>
+     </div>
+     <div id="contact">
+      <h1 class="title-effect word">CONTACT ME</h1>
+      <p class="services-p">
+      Visit my portfolio and send me a comment!
+      </p>
+      <div class="contact-all">
+        <div class="contact-icon">
+          <i class="fa-solid fa-share-nodes"></i>
+          <h3 class="contact-h3">Socials Profile</h3>
+<div class="inner-icon">
+<a href="#"><i class="fa-brands fa-linkedin fa-beat"></i></a>
+<a href="#"><i class="fa-brands fa-x-twitter fa-beat"></i></a>
+<a href="#"><i class="fa-brands fa-instagram fa-beat"></i></a>
+<a href="#"><i class="fa-brands fa-telegram fa-beat"></i></a>
+<a href="#"><i class="fa-brands fa-whatsapp fa-beat"></i></a>
+</div>
+      </div>
+      </div>
+      <div class="contact-form">
+        <form action="">
+            <input class="name" type="text" placeholder="Your name">
+            <input class="email" type="email" placeholder="Your email">
+            <input  class="subject" type="text" placeholder="Subject">
+            <textarea class="text-area" name="" id="" rows="10" cols="10" placeholder="Message"></textarea>
+            <button class="form-btn">Send</button>
+        </form>
+    </div>
+    <div class="icon-1">
+      <a href="$">
+        <i class="fa-solid fa-envelope"></i></a>
+      <h3>Email</h3>
+      <p>hodamadadi@gmail.com</p>
+  </div>
+  <div class="icon-2">
+  <a href="#"><i class="fa-solid fa-phone-volume"></i></a>
+      <h3>Call me</h3>
+      <p>+73 1062848</p>
+  </div>
+     </div>
+     <footer>
+      <h1 class="title-effect">CONTACT ME</h1>
+      <p class="services-p">
+      Thank you for visit my portfolio!
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa-brands fa-linkedin  fa-shake"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter  fa-shake" ></i></a>
+        <a href="#"><i class="fa-brands fa-instagram  fa-shake"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram  fa-shake"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp  fa-shake"></i></a>
+        </div>
+        <p>©️ Copyright | 7-3-2024</p>
+        <p>Design by <span>HODA MADADI</span></p>
+     </footer>
+    </section>
+  </body>
+</html>
