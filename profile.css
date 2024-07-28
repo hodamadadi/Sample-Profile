@@ -113,7 +113,7 @@
     border-radius: 50%;
   }
 }
-/* HOME----------------------------------------------------------------> */
+/* HOME PAGE STYLE----------------------------------------------------------------> */
 #section-1 {
   width: 100%;
   margin: auto;
@@ -226,7 +226,7 @@ ul {
   margin: 0;
   padding: 20px;
   overflow: hidden;
-  box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 li {
   float: left;
@@ -281,27 +281,27 @@ li.dropdown {
 }
 .title-effect {
   font-weight: 700;
-    font-family: Hack, sans-serif;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #000, #eab105, #000);
-    letter-spacing: 5px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: shine 2s linear infinite;
-    position: relative;
-  }
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #eab105, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 2s linear infinite;
+  position: relative;
+}
 
-  @keyframes shine {
-    0% {
-      background-position-x: -500%;
-    }
-    100% {
-      background-position-x: 500%;
-    }
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
   }
+  100% {
+    background-position-x: 500%;
+  }
+}
 
 /* ABOUT---------------------------------------------------------> */
 
