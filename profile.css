@@ -512,16 +512,12 @@ li.dropdown {
     left: 50%;
   }
 }
-/* .title-effect {
-  margin-top: 10rem;
-} */
 .about h1 {
   font-family: monospace;
   font-size: 40px;
   text-align: center;
   color: #ffc60b;
   text-shadow: #444444;
-  /* margin-top: 7rem; */
 }
 .about-inner {
   width: 80%;
@@ -655,7 +651,7 @@ li.dropdown {
   color: white;
   text-align: justify;
 }
-/* SERVICES-------------------------------------------------------------> */
+/* SERVICES  PAGE STYLE-------------------------------------------------------------> */
 #services {
   padding-top: 1.5rem;
 }
